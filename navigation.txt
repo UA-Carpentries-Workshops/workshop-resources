@@ -1,0 +1,63 @@
+# cd stands for change directories
+# a directory is  the same a folder.  when you see a folder icon in your 
+# file system explorer (finder), you are looking at a directory
+
+cd Desktop
+
+# this will take you to the Deskop.  You are probably familiar with all 
+# the stuff you have on your Desktop.  This the big screen you see when 
+# you login to you computer
+
+# pwd stands for present working directory
+# this command will tell you the "absolute" path to where you are in the 
+# filesystem
+
+pwd
+
+# you should see something that kind of looks like something you have 
+# seen before
+# it looks like a ...  URL.  It looks like a way to get to a website
+# That is because they are the same thing.
+# URLs tell you how to get to a website and website page
+# paths tell you how to get to files and directories
+# pwd tells you how to get to where you are now
+# If you were clicking on folders, these are the folder you would
+# have to click in order to get to where you are
+#  what does pwd tell you right now?  Can you get there using Windows 
+# Explorer or Finder?
+
+pwd
+
+# this shows us the absolute path
+# this is the from the starting point of the files system (the c: for 
+instance)
+# to where you are now
+
+# we can also ask the shell to show us a list of files in the 
+# directory where we are or other directories using the relative path
+
+ls
+
+# what do you see?
+# do you see the same things in your file explorer?
+# do you have other folders listed?  you can list the contents
+# of those folders too by entering the relative path to those folder
+
+ls foldername
+
+# replace foldername with the name of a folder you can see when you 
+# enter ls
+
+# what do you see?
+# can you go to that folder in the file explorer?  Do you see the same thing
+
+# ls can list files in differnet ways.  You can
+# ls -l to see file permissions and the last date it was changed
+# try that now
+
+ls -l
+
+#  what do you see?  You might also see this information in your File explorer
+
+
+
