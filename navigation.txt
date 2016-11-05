@@ -59,5 +59,44 @@ ls -l
 
 #  what do you see?  You might also see this information in your File explorer
 
+# let's try cd again
+# rember we use cd to change directories
+# now that you know what directories are near you let's cd into one
 
+cd foldernameofyourchoice
+
+# now let's see what is in that folder
+
+ls
+
+# what do you see?  Is it the same as what you see in file explorer?
+
+# let's see what the path is to where we are right now
+
+pwd
+
+# what do you see?  is it what you expected?
+
+# let's go back to the desktop
+# use cd to try to go there.  
+#  but let's stop by the "home" directory first
+# the home directory is where your computer thinks your files start.  
+# it is a folder on your computer with your user name
+
+cd ~
+
+# to go to the home
+
+ls
+
+# see what is there?  Documents is in there.  Windows users will be familiar with
+# that folder
+
+# now let's go to the Desktop
+
+cd Desktop
+ls
+
+# we see what is there
+# and now we can try creating folders and files
 
