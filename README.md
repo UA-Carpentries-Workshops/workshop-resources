@@ -2,7 +2,7 @@ This is my personal Software Carpenty repo where I keep source files used in the
 
 I am co-teaching the Python for the first time at the next Software Carpentry.
 
-[University of Arizona Software Carpentry Worskip 2017-02-25](https://uhilgert.github.io/2017-02-25-CyVerse/)
+[University of Arizona Software Carpentry Worskop 2017-02-25](https://uhilgert.github.io/2017-02-25-CyVerse/)
 
 The Python lesson include a Jupyter Notebook.  We use Anaconda3 in the workshops. Steps to use:
 
