@@ -1,3 +1,5 @@
-This is the repository we will use to teach the shell at the Nov. 5 & 6 2016 Software Carpentry Workshop at the University of Arizona.
+This is my person Software Carpenty repo where I keep source files used in the workshops and Jupyter Notebooks.
 
-https://strootman.github.io/2016-11-05-Tucson/
+I am co-teaching the Python for the first time at the next Software Carpentry.
+
+[University of Arizona Software Carpentry Worskip 2017-02-25](https://uhilgert.github.io/2017-02-25-CyVerse/)
