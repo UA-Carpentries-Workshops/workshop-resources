@@ -1,0 +1,42 @@
+### Meeting, Friday 28 Oct ###
+
+Jonathan: Intro
+start of Workshop: 9:15am
+9:15-10:30: first module Shell
+10:45-12:00: second module. Git
+13:00-13:30pm: last module. 
+
+https://strootman.github.io/2016-11-05-Tucson/
+
+https://swcarpentry.github.io/instructor-training/02-novice/
+
+https://github.com/cyverse/edu/blob/master/meeting_notes/software_carpentry/2016-10-07_1300_Bio5-109.md
+
+### Meeting with Marnee, prep. for class ###
+
+
+
+9:00am - 9:15am : Jonathan Intro
+9:15am - 9:20am : Intro ourselves
+9:20am - 9:30am : Marnee, what is the shell?, Request to put the two windows on their screen (Git & Explorer). Help them to get to the correct location Desktop. Explain root, home. pwd, cd, ls. 
+9:30am - 10:30am : Request to open two windows. Tania, navigating files and directories. Make a directory. Touch a txt file. Open it on Notepad (with numbers!) . Tequest to make a list. Teach cat, head, tail, wc, grep, sort. Creating files and directories.
+10:25am - 10:30am : Formative assessment. Request to write comment on sticky note and paste it in the wall before leaving 
+10:30am - 10:45am : COFFEE BREAK
+10:45am - 11:05am: Git. Explain.  
+### play with the data and try to come out with a good excersise for the session. Something to finish up with a script. ###
+11:05am - 11:10am : explain the data
+11:10am - : explore and fix the data
+
+
+Request to type git clone ... to download the data. Tania, navigating files and directories.
+
+Data:
+https://github.com/cyverse/edu/
+
+Get the SCW old version of Git Bash
+
+
+
+
+Notes:
+We are entering the Big Data era. Although people is working hard on developing software and easy to use tools for big data managing and handling, to my knowledge the shell is the easiest, fastests, more widely used tool.

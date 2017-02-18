@@ -1,0 +1,87 @@
+# we can also use the shell to create our own files and folders
+# in the Desktop folder
+# let's create a new folder.  we will work inside of it
+
+mkdir name
+
+#this stands for make directory of this name
+
+ls
+
+# you should see you folder name in the list
+
+# go into the folder
+
+cd name
+ls
+
+# you should see nothing in the list.  the folder is empty
+# you have created a folder
+# let's see if we can create a file
+# there are lots of ways to do this.  
+
+touch filename.txt
+ls
+
+# this creates a new file
+# ls should show you the file in the list
+
+nano icecream.txt
+
+# this opens nano and you can type inside of here 
+# like you would in Word or notepad
+# this is called an "editor"
+# let's make a list of icecream flavors
+
+# type an icecream falvor followed by enter
+# type in a bunch of them in a list
+# at the bottom of the screen you should see some 
+# commands you can use inside of the editor
+# ^ mean Ctl or the Cotrol Key
+# hold ctl + the O key to save the file
+# try that now
+# to exit hit ctl + X
+# there are lots of other but we wont get into that now
+# do ctl O and then ctl X now
+# you should ahve exited the nano
+
+# we can make copies of files and move them to other places
+# let's make a new folder called copies
+
+mkdir copies
+
+# and let's copy the icecreams files into this folder
+
+cp icecream.txt copies/icecream2.txt
+ls copies
+
+# you should see the list of files inside of copies
+# do you see icecream2?
+# we can also move files without making a copy
+# this is like when you drag files around in your file explorer
+
+mv icecream.txt copies/icecream.txt
+ls
+
+# you should not see the icecream file listed
+ ls copies
+
+# you should see the icecream file listed
+
+# let's copy it back to the orignal folder
+
+cp copies/icecream.txt icecream.txt
+ls
+
+# you should see icecream
+# you can also remove folders and files
+# rmdir deletes directories (folders)
+# rm deleted files
+# let's try deleting the copies directory
+
+rmdir copies
+
+#did it let you or warn you?  good.  git bash doesnt usually let you delete stuff
+# but UNIX bash probably will
+
+
