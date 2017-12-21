@@ -1,0 +1,45 @@
+#!/bin/bash
+
+########################################################################
+## This script is used to split the gap minder data set
+## into individual files per country. 
+##
+##
+## Notice the 'echo' statements which are commented out below. Uncomment
+## the 'echo' statements to help see what's going on at each step of the 
+## script. Add your own, IF YOU DARE!!! 
+########################################################################
+
+
+# Create variable to define our gapminder file.
+# It is assumed that this file is tab delimited
+GAP_MINDER_FILE="../gapminderDataFiveYear.txt"
+
+# Create list of countries
+awk -F$'\t' '{print $1}' $GAP_MINDER_FILE | uniq > countries.txt
+
+# Capture number of countries
+NUM_COUNTRIES=$(wc -l countries.txt | awk '{print $1}')
+# echo "Number of lines" $NUM_COUNTRIES
+
+
+# Loop over each country in the 'countries.txt' file.
+for i in $(seq 1 $NUM_COUNTRIES)
+do
+   COUNTRY=$(head -n $i countries.txt | tail -n 1)
+   # echo $COUNTRY
+
+   grep "$COUNTRY" $GAP_MINDER_FILE > $(echo $COUNTRY | sed s/\\s/_/g | sed s/\\.//g | sed s/,//g).cc.txt
+   ##
+   # Let's break down what is happening in the command above:
+   #  $ grep "$COUNTRY" $GAP_MINDER_FILE
+   #  We are accessing the 'COUNTRY' variable we set above, but why are we surrounding it
+   #  with double quotes? The answer is white spaces!!
+   #
+   #  Next, we are redirecting the output from the grep command to file name defined by that big
+   #  statement after the ">" symbol.
+done 
+
+# Remove the 'countries.txt' file
+rm -f countries.txt 
+

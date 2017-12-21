@@ -1,0 +1,15 @@
+#! /bin/bash
+
+# This script will "sabotage" some of the split data for the shell lesson
+
+# spaces in file names
+
+# combine directories (e.g. all 1952 and 1957 files in one directory)
+
+# combine some files so that file contains multiple years
+# combine them out of order so you can sort them.
+
+# For the files which you combined, do so as a copy. We don't want to get to 
+# intense with our commands/pipeline, so the intent is to inspect the data, 
+# then realize that the combined files have duplicates. Then the combined files
+# can be removed to clean up the data set.
