@@ -550,7 +550,7 @@ Nice! This is helpful for finding out what happened to our files.
 
 Let's talk about commit messages. There are good commit messages and bad commit messages.
 
-A good message helps us understand `why` the changes were made, not `what` was changed, and is:
+A good message helps us understand `why` the changes were made.
 
 * descriptive
 * concise
