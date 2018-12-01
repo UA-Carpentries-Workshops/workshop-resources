@@ -229,7 +229,7 @@ Notice that now instead of `new` we see `modified`. Git sees the changes we made
 
 Let's see what git thinks has changed.
 
-### git diff to see the difference between the current file and the previous version
+### git diff (to see the difference between the current file and the previous version)
 
 ```bash
 git diff script.sh
@@ -319,7 +319,7 @@ We went through a lot of steps. It might all seems like a blur, but we will repe
 * We use `git status` to get some information about our repository
   * Does git see changes to our files?
   * Does git see new files?
-  * What files are in staging? 
+  * What files are in staging?
 * We created an empty file and added it to the git repository
   * We used `git add` to add it to the staging area
   * We used `git commit -m 'commit message' to save the changes to the git repository
@@ -327,4 +327,200 @@ We went through a lot of steps. It might all seems like a blur, but we will repe
 * We added the modified file to staging with `git add`
 * We saved those changes to the repository with `git commit -m 'commit message'
 
-> Let's take a break. Take a few minutes to stretch. Put your questions or comments in the etherpad and we will talk about some of them after the break.
+> Let's take a break. Take a few minutes to stretch. Put your questions or comments in the `etherpad` and we will talk about some of them after the break.
+
+## Why `git add`? Why staging?
+
+Staging let's us do these thing:
+
+* Bundle files and related changes together into one commit
+* Commit only those changes we are ready to commit
+* Commit changes to more than one file at a time
+
+## Creating a new repository when you already have a bunch of files
+
+I bet some of you already have a project going, with lots of files, and you are wondering if you have to have an empty folder in order to create a new git repository.
+
+> How do we create a new git repository if we already started working on a project?
+
+Don't worry, you can `git init` at any point.
+
+> IMPORTANT: git will only track files in the folder where the `.git` repository is and and files inside of that folder. So if your project is not contained under one folder, you should move all of the files you need to track to go under one folder or you will need to have multiple git repositories.
+
+Let's try creating a git repository in a folder with lots of files already in it.
+
+Use change directory to go up one folder level.
+
+```bash
+cd ..
+```
+
+Let's create a new folder.
+
+```bash
+mkdir git-project
+```
+
+```bash
+cd git-project
+```
+
+Let's see what git thinks is going in here? Can you guess what `git status` will do?
+
+```bash
+git status
+```
+
+```text
+fatal: Not a git repository (or any of the parent directories): .git
+```
+
+Good because we haven't done the command that creates a new git repository. Do you remember what that command was? Put it in the Etherpad.
+
+Let's create three files.
+
+```bash
+touch script.sh
+touch code.py
+touch about.md
+```
+
+Let's add some stuff to each file.
+
+Open `script.sh` in your favorite editor.
+
+Put this in the file and save it.
+
+```text
+#!/bin/bash
+
+ls -la
+```
+
+Run the file.
+
+```bash
+sh script.sh
+```
+
+Did it work? If it didn't try to get it working or ask a helper for help.
+
+Let's add some stuff to `code.py`.
+
+Open `code.py` and add this text and then save it.
+
+```python
+# I might put some python code in here some day. But for now it is just a comment.
+```
+
+Open `about.md` and add this bit of `markdown`.
+
+```text
+# About Me
+```
+
+You should have three files now. Let's try to create a new git repository.
+
+```bash
+git init
+```
+
+What happened?
+
+```text
+Initialized empty Git repository in C:/Users/Marnee/Dropbox/github/ua-carpenties-workshops/git-project/.git/
+```
+
+We got the same output as when we have an empty folder.
+
+```bash
+ls -la
+```
+
+Did you see your `.git` folder? That's your new repository.
+
+What does `git` think is happening now?
+
+```bash
+git status
+```
+
+What do you expect to see? Put your thoughts in the Etherpad.
+
+> Will git see our files?
+
+```text
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        about.md
+        code.py
+        script.sh
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+Git sees the files. Great!
+
+I think our script file is ready to commit, but I don't want to commit code or about just yet. Let's go through the process to commit `script.sh`.
+
+What is the first step? Try it yourselves. Green stickies if it worked the way you think it should.
+
+(note to instructor -- wait for the green stickies)
+
+What should you do next? Let's see if git has our file in the staging area. What command do I use? Try it yourselves.
+
+(wait for the stickies)
+
+Let's see what git thinks has changed. What command do I use to see the difference between the current state of a file and the previous state? What do you expect to happen? Put your thoughts in the Etherpad.
+
+Try it yourselves.
+
+(wait for stickies)
+
+On to the final step.
+
+We have added our file to staging. How do we finally save the changes to the git repository?
+
+Try it yourselves.
+
+(wait for the stickies)
+
+How did this go? Are you remembering the commands and the order in which they should happen? Don't worry if you didn't get it. We will be doing this again.
+
+### git diff and git status are not required
+I had you do `git diff` and `git status` but these commands are not required to save changes to a git repository. You should use them often though because they help you see what is happening. This will help prevent mistakes.
+
+## Review
+
+What are the required steps to get your changes into the git repository?
+
+1. Make changes to a file or files
+2. `git add` to add your changed files (the changes) to the staging
+3. `git commit -m 'commit message'` to save your changes to the git repository
+
+Let's take a bit of a break. Let's see what questions we have in the Etherpad.
+
+## Do it yourselves
+
+Let's commit the changes to `code.py`. 
+
+When you are done with `code.py` commit the changes to `about.md`.
+
+**Try it yourselves. Try it with the optional commands, too.**
+
+![YOU CAN DO IT](https://happy-wishes.net/wp-content/uploads/2017/10/YOucandoitmemesbest.jpg?189db0&189db0)
+
+Green stickies when you are done.
+
+(wait for the stickies. check the etherpad for comments)
+
+How did that go? Any questions or comments? Feel free to ask them out loud.
+
+Are you feeling more confident with `git`? Don't worry if you are not. We are going to do it all ... again!
+
+![DO IT AGAIN](https://funnypictures.me/wp-content/uploads/2012/10/funny-pictures-felix-baumgartner-space-jump-that-was-fun-meme.jpg)
