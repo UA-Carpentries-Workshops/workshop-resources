@@ -3,14 +3,12 @@
 We will learn and reinforce git commands. We will learn how to:
 
 * Start a git repository
-* The importance of a .gitignore file
 * Configure git and the git configuration options
 * Check for changed files
 * See the changes
 * See a log of changes
 * Stage files whose changes you want to track
 * Commit the changes to the git repository
-* Push changes to Github for all the world to see
 
 You should be in the `basic-git` folder created during the workshop setup. Use `pwd` to check to make sure you are there.
 
@@ -310,7 +308,7 @@ Notice
 
 That makes sense because of what we saw with `git diff`. We had two `new` lines in the file.
 
-## Review
+## Review 1
 
 We went through a lot of steps. It might all seems like a blur, but we will repeat all of this and build on it as we go along. Let's take a bit to review what we just did:
 
@@ -495,7 +493,7 @@ How did this go? Are you remembering the commands and the order in which they sh
 ### git diff and git status are not required
 I had you do `git diff` and `git status` but these commands are not required to save changes to a git repository. You should use them often though because they help you see what is happening. This will help prevent mistakes.
 
-## Review
+## Review 2
 
 What are the required steps to get your changes into the git repository?
 
@@ -513,7 +511,7 @@ When you are done with `code.py` commit the changes to `about.md`.
 
 **Try it yourselves. Try it with the optional commands, too.**
 
-![YOU CAN DO IT](https://happy-wishes.net/wp-content/uploads/2017/10/YOucandoitmemesbest.jpg?189db0&189db0)
+![YOU CAN DO IT](https://sayingimages.com/wp-content/uploads/you-can-do-it-if-you-do-it-meme.jpg)
 
 Green stickies when you are done.
 
@@ -524,3 +522,45 @@ How did that go? Any questions or comments? Feel free to ask them out loud.
 Are you feeling more confident with `git`? Don't worry if you are not. We are going to do it all ... again!
 
 ![DO IT AGAIN](https://funnypictures.me/wp-content/uploads/2012/10/funny-pictures-felix-baumgartner-space-jump-that-was-fun-meme.jpg)
+
+## git log (see what commits have happened)
+
+Git can give you a list of all of the commits that happened in your repository. Let's look at them.
+
+```bash
+git log
+```
+
+```text
+Author: Marnee Dearman <marnee.dearman@gmail.com>
+Date:   Sat Dec 1 16:49:36 2018 -0700
+
+    My concise but precise commit message
+```
+
+Notice
+
+* we see who was responsible
+* we see the date and time
+* we see the commit message
+
+Nice! This is helpful for finding out what happened to our files.
+
+## Commit messages
+
+Let's talk about commit messages. There are good commit messages and bad commit messages.
+
+A good message helps us understand `why` the changes were made, not `what` was changed, and is:
+
+* descriptive
+* concise
+* precise
+
+This is easier said than done, but with some experience you will learn how to make good commit messages. This is especially important if you are collaborating with others. Be kind to them, and your future self, and make useful commit messages.
+
+A bad message might look like this:
+
+* commit 1 
+* changed the file
+* This thing was broken and now it isnt
+* **YOLO!!**
