@@ -21,5 +21,3 @@ We need to create a folder structure where we will be doing our work.
 3. Change directories so you are in that folder
 4. Create a folder called `basic-git`
 5. Change directories so you are in that folder
-
-We will be working in the `basic-git` folder for the rest of the `basic-git lesson`.
