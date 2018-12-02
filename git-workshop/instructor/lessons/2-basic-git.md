@@ -313,7 +313,7 @@ That makes sense because of what we saw with `git diff`. We had two `new` lines 
 
 ## Review 1
 
-We went through a lot of steps. It might all seem like a blur, but we will repeat all of this and build on it as we go along. Let's take a bit to review what we just did:
+We went through a lot of steps. It might all seem like a blur, but we will repeat most of this and build on it as we go along. Let's take a bit to review what we just did:
 
 * We configured the git username and email with `git config`
 * We created a new repository with `git init`
