@@ -4,13 +4,13 @@
 
 We will learn and reinforce git commands. We will learn how to:
 
-* Start a git repository
-* Configure git and the git configuration options
-* Check for changed files
-* See the changes
-* See a log of changes
-* Stage files whose changes you want to track
-* Commit the changes to the git repository
+* `git init` - Start a git repository
+* `git config` - Configure git and the git configuration options
+* `git status` - Check for changed files
+* `git diff` - See the changes
+* `git log` - See a log of changes
+* `git add` - Stage files whose changes you want to track
+* `git commit -m 'message'` - Commit the changes to the git repository
 
 You should be in the `basic-git` folder created during the workshop setup. Use `pwd` to check to make sure you are there.
 
@@ -122,7 +122,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 > Git sees our new file and tries to be helpful. Git suggests that this is a file we might want to track. Thanks git, that is true. I do want to `track changes` to this `new` file.
 
-## git add (stage a file to commit it to the git repository)
+## git add (stage changes to commit it to the git repository)
 
 To start tracking changes to a file we first need to add it to what git calls `staging`. Don't worry about what this means for now. Let's go through the whole process and later we wil explain what is going on and why we do the staging thing.
 
@@ -159,7 +159,7 @@ You might be thinking
 
 Git now knows two things:
 
-- We are tracking a file named script.sh
+- We are tracking changes to a file named script.sh
 - The contents of that file, which in this case is nothing
 
 Try it now.
@@ -181,8 +181,8 @@ Git tries to help us. It tells us
 
 * the number of changed files
 * the number of changes
-    * the number of new changes added to the files
-    * the number of things that were deleted from the file
+  * the number of new changes added to the files
+  * the number of things that were deleted from the file
 
 We don't have much going on, but that's ok. Let's add some stuff to our `script.sh` and see what git does with it.
 
@@ -291,6 +291,8 @@ Notice
 
 Ok that makes sense.
 
+> Pro tip: Git tries to help you sometimes with output messages that give you advice. Notice `use "git reset HEAD file..." to unstage)`. You can use `git reset` to undo adding a file to staging.
+
 Now let's commit the changes.
 
 ```bash
@@ -360,11 +362,11 @@ cd ..
 Let's create a new folder.
 
 ```bash
-mkdir git-project
+mkdir git-workshop
 ```
 
 ```bash
-cd git-project
+cd git-workshop
 ```
 
 Let's see what git thinks is going in here? Can you guess what `git status` will do?
@@ -430,7 +432,7 @@ git init
 What happened?
 
 ```text
-Initialized empty Git repository in C:/Users/Marnee/Dropbox/github/ua-carpenties-workshops/git-project/.git/
+Initialized empty Git repository in C:/Users/Marnee/Dropbox/github/ua-carpenties-workshops/git-workshop/.git/
 ```
 
 We got the same output as when we have an empty folder.
