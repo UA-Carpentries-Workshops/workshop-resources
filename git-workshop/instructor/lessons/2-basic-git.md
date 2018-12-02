@@ -1,5 +1,6 @@
 # Basic `git` lesson
 
+
 We will learn and reinforce git commands. We will learn how to:
 
 * Start a git repository
@@ -308,9 +309,11 @@ Notice
 
 That makes sense because of what we saw with `git diff`. We had two `new` lines in the file.
 
+![Git is great](https://thinkr.fr/wp-content/uploads/github-meme.png)
+
 ## Review 1
 
-We went through a lot of steps. It might all seems like a blur, but we will repeat all of this and build on it as we go along. Let's take a bit to review what we just did:
+We went through a lot of steps. It might all seem like a blur, but we will repeat all of this and build on it as we go along. Let's take a bit to review what we just did:
 
 * We configured the git username and email with `git config`
 * We created a new repository with `git init`
