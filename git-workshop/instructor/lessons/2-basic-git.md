@@ -1,5 +1,6 @@
 # Basic `git` lesson
 
+![git er done](https://afchurch.files.wordpress.com/2015/07/get-er-done-300x300.jpg)
 
 We will learn and reinforce git commands. We will learn how to:
 
