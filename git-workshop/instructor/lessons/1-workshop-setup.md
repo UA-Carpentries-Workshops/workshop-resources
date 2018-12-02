@@ -3,13 +3,16 @@
 ## First
 Do you have any burning questions about `git`? Maybe you have a question about how to use git in your labs or projects? Put your thoughts and questions in the `etherpad` in the QUESTIONS section. As we go along, put any new thoughts or questions in the `etherpad` in the QUESTIONS section and we will try to answer them as we go along.
 
+Put a link to your Github profile in the Etherpad.
+
 ## Use the stickies
 Having trouble? Don't hesitate to put up your sticky and someone will be around to help.
 
 ## Desktop setup
 
 * Open Terminal or git-bash
-* Open your browser and go to the Github repo for the workshop
+* Open your browser and go to the Github repo for the workshop. Login to Github if you haven't already.
+  * If you have 2-FA (two factor authentication) on your Github account please let me know in the Etherpad.
 * You'll want to have both windows viewable at a time. On Windows use the Window-key + arrow key to snap your windows to one side or the other.
 
 ## File system setup
