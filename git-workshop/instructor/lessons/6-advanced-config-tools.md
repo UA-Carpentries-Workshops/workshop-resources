@@ -8,6 +8,7 @@
   * Github Desktop
   * Source Tree
   * Git Kraken
+* Using Github issues
 
 ## Setting up 2-FA on Github
 
