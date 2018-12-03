@@ -312,7 +312,6 @@ Notice
 
 That makes sense because of what we saw with `git diff`. We had two `new` lines in the file.
 
-![Git is great](https://thinkr.fr/wp-content/uploads/github-meme.png)
 
 ## Review 1
 
@@ -332,6 +331,8 @@ We went through a lot of steps. It might all seem like a blur, but we will repea
 * We saved those changes to the repository with `git commit -m 'commit message'
 
 > Let's take a break. Take a few minutes to stretch. Put your questions or comments in the `etherpad` and we will talk about some of them after the break.
+
+![Things are getting serious](https://thinkr.fr/wp-content/uploads/github-meme.png)
 
 ## Why `git add`? Why staging?
 
