@@ -6,6 +6,7 @@
 * `git checkout -b` -- creating a new branch
 * `git checkout` -- switching to a branch
 * `git merge` -- merge the changes of two branches
+* `git branch` -- list branches
 * Dealing with merge conflicts (when changes overwrite each other)
 * When to use branching
 * Some common branching and merging patterns
