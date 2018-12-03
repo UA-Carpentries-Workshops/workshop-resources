@@ -19,3 +19,11 @@
 
 [Merge Conflicts](https://www.atlassian.com/git/tutorials/using-branches/git-merge)
 
+## Terminology
+
+`branch`- a new 
+`checkout` - switch to a different branch
+`merge` - 
+`history` or `commit history`
+`conflict`
+
