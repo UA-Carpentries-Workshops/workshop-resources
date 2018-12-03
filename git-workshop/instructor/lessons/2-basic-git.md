@@ -2,7 +2,7 @@
 
 ![git er done](https://afchurch.files.wordpress.com/2015/07/get-er-done-300x300.jpg)
 
-We will learn and reinforce git commands. We will learn how to:
+## Topics Covered
 
 * `git init` - Start a git repository
 * `git config` - Configure git and the git configuration options
@@ -11,6 +11,32 @@ We will learn and reinforce git commands. We will learn how to:
 * `git log` - See a log of changes
 * `git add` - Stage files whose changes you want to track
 * `git commit -m 'message'` - Commit the changes to the git repository
+
+## Guides and resources
+
+[JessiTron: Git Happens (an in-depth look at how Git works)](https://www.youtube.com/watch?v=Dv8I_kfrFWw)
+
+[First Time Git Setup Guide](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
+
+## Terminology
+
+`repository` -- this is what we call the thing that tracks changes to our files. It is like a database.
+
+`repo` -- short for repository
+
+`commit` --  this can be a verb or a noun. To commit means to save changes to a repository. We often use commit to refer to a set of changes in a repository 
+
+_I commited the changes to the repository._
+
+_The last commit introduced a bug in the program._
+
+`changeset` -- is a set of changes which should be treated as an indivisible group. Also known as a a commit.
+
+`index` -- this is a list of all changesets (commits). 
+
+`staging` -- bundling changes together to save to the git repository in one changeset (commit)
+
+## Before we start
 
 You should be in the `basic-git` folder created during the workshop setup. Use `pwd` to check to make sure you are there.
 
@@ -122,7 +148,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 > Git sees our new file and tries to be helpful. Git suggests that this is a file we might want to track. Thanks git, that is true. I do want to `track changes` to this `new` file.
 
-## git add (stage changes to commit it to the git repository)
+## git add (stage changes to get them ready to save to the git repository)
 
 To start tracking changes to a file we first need to add it to what git calls `staging`. Don't worry about what this means for now. Let's go through the whole process and later we wil explain what is going on and why we do the staging thing.
 
