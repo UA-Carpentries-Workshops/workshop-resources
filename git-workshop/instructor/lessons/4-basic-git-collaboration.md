@@ -21,6 +21,10 @@ How to share and collaborate on projects using git and Github.
 
 ## Guides and resources
 
+## Git vs Github
+
+> GitHub is not required to use git. Github is an online service that provides a service for hosting remote git repositories.
+
 [Git vs. Github](https://stackoverflow.com/questions/13321556/difference-between-git-and-github)
 
 ## Remote repositories (Github)
@@ -62,6 +66,16 @@ git push -u origin master
 > I'm using ssh. You will probably see an `https` link.
 
 We can use these git commands to link the git-workshop repository we have been working on in `Basic Git` and `Branching and Merging`. Make sure you are in your git-workshop directory for the next sections.
+
+## Make sure you are on the master branch before continuing
+
+Do you remember how to do that?
+
+Try it yourself.
+
+```bash
+git checkout master
+```
 
 ## git remote (link your local repository to your remote repository)
 
@@ -154,10 +168,48 @@ What does git check?
 
 Git checks to see what commits are in the remote repository that are not in your local repository.
 
+Let's see what happened on Github.
+
+Go to your repository on Github and refresh the page. You should see all of your files.
+
+## Review 1
+
+What have we done so far?
+
+* We setup a repository called `git-workshop`
+* We added a remote called origin that points to the `git-workshop` remote branch on Github.
+* We learned how to list our remotes with `git remote -v`
+* We learned how to push such that we link a local branch with a remote branch with `git push -u <remotename> <branchname>`
+
+![I didnt forget to push](http://m.memegen.com/bsky67.jpg)
+
+> Take a few minutes break.
+
+Do you have any questions? Put them in the Etherpad and we will try to get to them after the break.
+
+## The Github repository
+
+Let's take a tour of our Github repo.
+
+We can see
+
+* Our files and the last commit message that affected them
+* A link to `branches`
+* A link to `commits`
+
+Let's see what is in `branches`.
+
+### Github branches
+
+Let's see what is in `commits`.
+
+### Github commits
+
+Here we can see a commit history. This is a list of all of the changes that have been made to our files. If you click on a commit you can see a visual representation of what has changed.
+
+* Green lines were lines that were added. 
+* Red lines were lines that were removed or changed.
 
 
 
-Now let's check to see 
-
-![Github](http://m.memegen.com/bsky67.jpg)
 
