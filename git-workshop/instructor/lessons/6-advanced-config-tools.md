@@ -8,7 +8,10 @@
   * Github Desktop
   * Source Tree
   * Git Kraken
+  * TortoiseGit
 * Using Github issues
+* .gitignore 
+* .gitkeep
 
 ## Setting up 2-FA on Github
 
@@ -32,8 +35,10 @@ Using SSH can be more secure.
 
 There is a variety of visual tools that make it easier to use git. These tools will do all of the most common git commands and more.
 
-I like [Source Tree](https://www.sourcetreeapp.com/) best but some other popular tools are:
+Some popular tools are:
 
+* [Sourcetree](https://www.sourcetreeapp.com/)
 * [Github Desktop](https://desktop.github.com/)
-* [Git Kraken](https://www.gitkraken.com/)
+* [GitKraken](https://www.gitkraken.com/)
+* [TortoiseGit -- integrates with the file system](https://tortoisegit.org/)
 

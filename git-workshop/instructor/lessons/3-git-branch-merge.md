@@ -7,8 +7,9 @@
 * `git checkout` -- switching to a branch
 * `git merge` -- merge the changes of two branches
 * `git branch` -- list branches
-* Dealing with merge conflicts (when changes overwrite each other)
 * When to use branching
+* When to merge
+* Dealing with merge conflicts (when changes overwrite each other)
 * Some common branching and merging patterns
 
 ## Guides
@@ -19,11 +20,21 @@
 
 [Merge Conflicts](https://www.atlassian.com/git/tutorials/using-branches/git-merge)
 
+[When do merge conflicts happen?](https://help.github.com/articles/about-merge-conflicts/)
+
 ## Terminology
 
 `branch`- a new 
+
 `checkout` - switch to a different branch
+
 `merge` - 
+
 `history` or `commit history`
+
 `conflict`
+
+`fast-forward`
+
+`merge commit` git tries to zip commits together. sometimes the teeth queeze together and this causes a conflict.
 

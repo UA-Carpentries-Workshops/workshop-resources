@@ -20,7 +20,7 @@
 
 ## Terminology
 
-`repository` -- this is what we call the thing that tracks changes to our files. It is like a database.
+`repository` -- this is what we call the thing that tracks changes to our files. You might think of it like a database, an invoice, or a reciept of every change you have ever saved.
 
 `repo` -- short for repository
 
