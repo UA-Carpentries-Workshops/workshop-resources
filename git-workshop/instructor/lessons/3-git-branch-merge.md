@@ -11,6 +11,7 @@
 * When to merge
 * Dealing with merge conflicts (when changes overwrite each other)
 * Some common branching and merging patterns
+* How git stops you from overwriting your changes
 
 ## Guides
 
