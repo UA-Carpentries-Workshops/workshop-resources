@@ -2,9 +2,11 @@
 
 ## Topics covered
 
+* `git reflog`
 * `git revert`
 * `git reset`
 * `git checkout -f`
+
 
 ## Guides and resources
 

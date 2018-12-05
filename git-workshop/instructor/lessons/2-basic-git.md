@@ -18,6 +18,8 @@
 
 [First Time Git Setup Guide](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 
+[So WTF is git?](https://codeburst.io/so-wtf-is-git-fa7daa0e0271)
+
 ## Terminology
 
 `repository` -- this is what we call the thing that tracks changes to our files. You might think of it like a database, an invoice, or a reciept of every change you have ever saved.

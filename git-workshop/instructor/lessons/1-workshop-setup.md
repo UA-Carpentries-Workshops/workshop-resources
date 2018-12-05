@@ -1,4 +1,4 @@
-# Welcome to the Git Workshop (you can check-in but you can never leave)
+# Welcome to the Git Workshop (you can checkout but you can never leave)
 
 ## First
 Do you have any burning questions about `git`? Maybe you have a question about how to use git in your labs or projects? Put your thoughts and questions in the `etherpad` in the QUESTIONS section. As we go along, put any new thoughts or questions in the `etherpad` in the QUESTIONS section and we will try to answer them as we go along.
