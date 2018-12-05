@@ -10,8 +10,8 @@ How to share and collaborate on projects using git and Github.
 * Forking repositories
 * `git remote` - List remote repositories, link to a remote repository
 * `git fetch` - Get references to all the stuff in the remote repository including commits and branches.
-* `git pull` - Pulling from a remote repository
 * `git push` - Pushing to a remote repository
+* `git pull` - Pulling from a remote repository
 * Github pull requests
 * The importance of a good README file
 * Markdown
@@ -197,11 +197,15 @@ We can see
 * A link to `branches`
 * A link to `commits`
 
-Let's see what is in `branches`.
-
 ### Github branches
 
-Let's see what is in `commits`.
+Just like on the command line, we can see branches on Github.
+
+To see all the remote branches we can do this command:
+
+```bash
+git branch -r
+```
 
 ### Github commits
 
@@ -210,6 +214,12 @@ Here we can see a commit history. This is a list of all of the changes that have
 * Green lines were lines that were added. 
 * Red lines were lines that were removed or changed.
 
+That's pretty nice. Thanks Github!
 
 
+
+
+# A little more about Github and project management
+
+## Using issues and issue numbers in commits
 

@@ -9,9 +9,9 @@
 * `git branch` -- list branches
 * When to use branching
 * When to merge
-* Dealing with merge conflicts (when changes overwrite each other)
 * Some common branching and merging patterns
 * How git stops you from overwriting your changes
+  * `git stash`
 
 ## Guides
 
@@ -37,13 +37,13 @@
 
 `conflict` - when two or more commits will change the same line, or lines, of code.
 
-`fast-forward` - what happens when a merge has no conflicts. All commits are zipped together and are now a part of the commit history.
+`fast-forward` - what happens when a merge has no conflicts. All commits are zipped together and are now a part of the commit history. This is the best most wonderful kind of merge.
 
-`merge commit` git tries to zip commits together. sometimes the teeth queeze together and this causes a conflict. In this case, once the conflicts are resolved, you will create a merge commit, which includes all of the changes from all commits in the merge.
+`merge commit` git tries to zip commits together. Sometimes the teeth queeze together and this causes a conflict. In this case, once the conflicts are resolved, you will create a merge commit, which includes all of the changes from all commits in the merge.
 
 ## Did you know that your git repository is actually a tree?
 
-It sure is.
+Look how nice.
 
 ![git is a tree](https://www.drupal.org/files/repositorydiagram.png)
 
@@ -221,4 +221,60 @@ We used `git branch` to see a list of branches and what branch we are on.
 
 We used `git checkout -b` to create a new branch to do some work. This left our master branch alone.
 
-We used `git merge` to zip together two branches. This applied all of the changes in one branch on another branch (master)
+We used `git checkout` to switch branches.
+
+We used `git merge` to zip together two branches. This applied all of the changes in one branch on another branch (master).
+
+## Why don't we _simply commit into master_?
+
+You can! There is nothing wrong with working in master all the time, especially if you are worknig on your own. Whether or not you use branching and merging is up to you. The more colloborators you have, though, the more you will want to consider a branching and merging strategy. 
+
+Most software developers use branching and merging. But there are some large organizations that only work in master. Come to a Research Bazaar meetup and I can tell you all about it ... .
+
+## Git keeps you from overwriting your files.
+
+Remember how switching branches changes your files to match the state of the files in the branch?
+
+Did this make you a little nervous? It shouldn't. Git won't let you loose your work.
+
+Let's make changes to about.md. Open it and add some stuff to it.
+
+Now try to switch to the script-updates branch. Just switch, don't create a new branch. Do you remember the command?
+
+(wait for stickies)
+
+```bash
+git checkout script-updates
+```
+
+What happened?
+
+```text
+$ git checkout script-updates                                                      
+error: Your local changes to the following files would be overwritten by checkout: 
+        about.md                                                                   
+Please commit your changes or stash them before you switch branches.               
+Aborting                                                                           
+```
+
+git won't let you loose your work! Thanks git.
+
+Ok, so what if you need to switch branches but you have work in prgress on the current one? There is a command for that. Notice in the git message:
+
+```text
+Please commit your changes or stash them before you switch branches.
+```
+
+We know how to commit, but what about stash?
+
+```bash
+git stash
+```
+
+This will save your changes to a special part of the repo called the stash. You can then reapply them later with
+
+```bash
+git apply
+```
+
+![git stash](https://memegenerator.net/img/instances/41106103/git-stash-so-much-win.jpg)
