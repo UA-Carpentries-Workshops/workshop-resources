@@ -558,8 +558,6 @@ How did that go? Any questions or comments? Feel free to ask them out loud.
 
 Are you feeling more confident with `git`? Don't worry if you are not. We are going to do it all ... again!
 
-![DO IT AGAIN](https://funnypictures.me/wp-content/uploads/2012/10/funny-pictures-felix-baumgartner-space-jump-that-was-fun-meme.jpg)
-
 ## git log (see what commits have happened)
 
 Git can give you a list of all of the commits that happened in your repository. Let's look at them.
@@ -601,3 +599,5 @@ A bad message might look like this:
 * changed the file
 * This thing was broken and now it isnt
 * **YOLO!!**
+
+![DO IT AGAIN](https://funnypictures.me/wp-content/uploads/2012/10/funny-pictures-felix-baumgartner-space-jump-that-was-fun-meme.jpg)
