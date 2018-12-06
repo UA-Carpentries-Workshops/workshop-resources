@@ -6,24 +6,22 @@ How to share and collaborate on projects using git and Github.
 
 * Setting up a Github repository
 * Remotes and `origin`
-* `git clone` - Cloning an existing Github repository
-* Forking repositories
 * `git remote` - List remote repositories, link to a remote repository
 * `git fetch` - Get references to all the stuff in the remote repository including commits and branches.
 * `git push` - Pushing to a remote repository
+* Forking repositories
+* `git clone` - Cloning an existing Github repository
 * `git pull` - Pulling from a remote repository
 * Github pull requests
 * The importance of a good README file
-* Markdown
 * Licenses
 * Setting up a Github organization
-* The importance of a good contributors guide
 
 ## Guides and resources
 
 ## Git vs Github
 
-> GitHub is not required to use git. Github is an online service that provides a service for hosting remote git repositories.
+> GitHub is not required to use git. GitHub is a service that provides hosting remote git repositories.
 
 [Git vs. Github](https://stackoverflow.com/questions/13321556/difference-between-git-and-github)
 
@@ -217,7 +215,145 @@ Here we can see a commit history. This is a list of all of the changes that have
 That's pretty nice. Thanks Github!
 
 
+## Forking and cloning
 
+Go to
+
+https://github.com/UA-Carpentries-Workshops/2018-12-07-git-workshop
+
+Click the Fork button.
+
+Wait for GitHub to do its thing.
+
+This made a copy of the repository in your account.
+
+Now we can use `git clone` to make a copy of the repository on our computers.
+
+First change directories to go to the root, or home, folder.
+
+```bash
+cd ~
+```
+
+On the repository page, drop down the green button and click the clipboard to copy the url to the repostory.
+
+Use `git clone` to download the repository onto your computer. 
+
+```bash
+git clone git@github.com:MarneeDear/2018-12-07-git-workshop.git
+```
+
+Let's git do its thing.
+
+Once it is done you can change directories to go to the new repository.
+
+> Pro tip: tab complete!
+
+```
+cd 2018-12-07-git-workshop
+```
+
+Now list the content of the directory.
+
+```bash
+ls -la
+```
+
+Did you see the repository?
+
+What remotes do you have now? Do you remember the command?
+
+```bash
+git remote -v
+```
+
+Note that git automatically made the clone source the `origin`.
+
+(wait for stickies)
+
+Now you can work in this repository, make and commit changes, and even push them, like we did earlier, to your remote repository.
+
+
+> Common question: will changes made in the original repository get into my forked repository?
+
+Changes will not automatically update in your forked repository. In order to get them into your forked repository you can 
+
+1. Add the original repository ass a remote to this repository
+2. Pull from the original repository (probably from the master branch)
+3. Git will try to merge the branches
+4. You might have to resolve merge conflicts. This is why branching is a good idea in forked repositories.
+
+To add a new remote:
+
+```bash
+git remote add ua-carpentries https://github.com/UA-Carpentries-Workshops/2018-12-07-git-workshop.git
+```
+
+Now you can pull from the orignial remote
+
+```bash
+git pull ua-carpentries master
+```
+
+## Review 2
+
+Let's take a break and review.
+
+We learned about GitHub.
+
+We forked a repository.
+
+We used `git clone` to download a copy of the repo.
+
+We added a remote to the original repository on UA Carpentries Workshop.
+
+## Making pull requests
+
+You do not have write access to the ua-carpentries remote, so if you want to contribute changes to it you will need to do something called a Pull Request.
+
+Let's create a new file. It should have a unique name.
+
+```bash
+touch FirstName-MiddleName-LastName.md
+```
+
+Now open your file and add a few words about yourself and save the file.
+
+Now commit the changes to the file. Do you remember the commands from Basic Git?
+
+(wait for stickies)
+
+Once it is committed
+
+Try pushing it to the ua-carpentries remote
+
+```bash
+git push ua-carpentries master
+```
+
+Denied.
+
+![Pull requests](http://seanhagen.github.io/git-presentation/img/keep-calm-and-send-a-pull-request.gif)
+
+No biggee. Let's commit to origin instead. Do you remember how to do that?
+
+(wait for stickies)
+
+Refresh the page on GitHub. Do you see your file?
+
+You're awesome. Now let's do the pull request.
+
+On the Github page click `Pull request`. It should be under the Big Green Button. Enter a comment and a title.
+
+Notice the arrow icon. This is telling you that you want to merge your `master` branch with the ua-carpentries `master` branch. 
+
+Click Create pull request to ask for this to happen.
+
+I will see it come in on the UA-Carpentries-Workshop repo page.
+
+I can now review it and merge it into master
+
+In practice you would probably work on a branch and ask to merge in your branch.
 
 # A little more about Github and project management
 

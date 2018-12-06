@@ -1,5 +1,8 @@
 # Welcome to the Git Workshop (you can checkout but you can never leave)
 
+
+[Please stop using git! (funny)](https://www.youtube.com/watch?v=o4PFDKIc2fs)
+
 ![this is git](https://imgs.xkcd.com/comics/git.png)
 
 _Our hope is that by the end of this workshop you will get the joke._
