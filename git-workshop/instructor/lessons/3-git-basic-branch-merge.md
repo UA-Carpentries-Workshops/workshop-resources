@@ -227,7 +227,7 @@ Do you see the line you added?
 
 ![winter is coming](https://d3suqxyr95ccqd.cloudfront.net/sites/default/files/styles/image_600_width/public/secondary_images/images_and_text/gitflow-no-commit-to-master.jpg?itok=ucTkD0WY)
 
-Git is like a tree and we can create branches and zip them together.
+Git is like a tree and we can create branches and merge them together.
 
 `master` is like the trunk of our tree. And like all trees, the trunk is the most important part so we need to be careful about making changes to it. With branching we can make all the changes we want without harming the trunk.
 
@@ -237,15 +237,15 @@ We used `git checkout -b` to create a new branch to do some work. This left our 
 
 We used `git checkout` to switch branches.
 
-We used `git merge` to zip together two branches. This applied all of the changes in one branch on another branch (master).
+We used `git merge` to merge together two branches.
 
 ## Why don't we _simply commit into master_?
 
-You can! There is nothing wrong with working in master all the time, especially if you are worknig on your own. Whether or not you use branching and merging is up to you. The more colloborators you have, though, the more you will want to consider a branching and merging strategy. 
+You can! There is nothing wrong with working in master all the time, especially if you are working on your own. Whether or not you use branching and merging is up to you. The more collaborators you have, though, the more you will want to consider a branching and merging strategy.
 
 Most software developers use branching and merging. But there are some large organizations that only work in master. Come to a Research Bazaar meetup and I can tell you all about it ... .
 
-## Git keeps you from overwriting your files.
+## Git keeps you from overwriting your files
 
 Remember how switching branches changes your files to match the state of the files in the branch?
 
@@ -273,7 +273,7 @@ Aborting
 
 git won't let you loose your work! Thanks git.
 
-Ok, so what if you need to switch branches but you have work in prgress on the current one? There is a command for that. Notice in the git message:
+Ok, so what if you need to switch branches but you have work in progress on the current one? There is a command for that. Notice in the git message:
 
 ```text
 Please commit your changes or stash them before you switch branches.
