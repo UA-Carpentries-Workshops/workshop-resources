@@ -7,7 +7,7 @@
 * `git init` - Start a git repository
 * `git config` - Configure git and the git configuration options
 * `git status` - Check for changed files
-* `git diff` - See the changes
+* `git diff` - See the differences
 * `git log` - See a log of changes
 * `git add` - Stage files whose changes you want to track
 * `git commit -m 'message'` - Commit the changes to the git repository
@@ -22,21 +22,21 @@
 
 ## Terminology
 
-`repository` -- this is what we call the thing that tracks changes to our files. You might think of it like a database, an invoice, or a reciept of every change you have ever saved.
+`repository` -- this is what we call the thing that tracks changes to our files. You might think of it like a database, an invoice, or a receipt of every change you have ever saved.
 
-`repo` -- short for repository
+`repo` -- short for repository.
 
-`commit` --  this can be a verb or a noun. To commit means to save changes to a repository. We often use commit to refer to a set of changes in a repository 
+`commit` --  this can be a verb or a noun. To commit means to save the state of all of your files in the repository.
 
-_I commited the changes to the repository._
+_I committed the changes to the repository._
 
 _The last commit introduced a bug in the program._
 
-`changeset` -- is a set of changes which should be treated as an indivisible group. Also known as a a commit.
+`changeset` -- is a set of changes which should be treated as an indivisible group. 
 
-`index` -- this is a list of all changesets (commits). 
+`index` -- this is a list of all commits.
 
-`staging` -- bundling changes together to save to the git repository in one changeset (commit)
+`staging` -- bundling files together to save their state to the repo.
 
 ## Before we start
 
@@ -150,7 +150,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 > Git sees our new file and tries to be helpful. Git suggests that this is a file we might want to track. Thanks git, that is true. I do want to `track changes` to this `new` file.
 
-## git add (stage changes to get them ready to save to the git repository)
+## git add (stage file to get them ready to commit them to the repo)
 
 To start tracking changes to a file we first need to add it to what git calls `staging`. Don't worry about what this means for now. Let's go through the whole process and later we wil explain what is going on and why we do the staging thing.
 
@@ -179,15 +179,15 @@ git tells us about the new file that is ready to be committed. Let's do that.
 
 ## git commit (save changes to the git repository)
 
-`git commit` will save any of the changes in staging to the git repository. 
+`git commit` will save any of the changes in staging to the git repository.
 
 You might be thinking
 
-> But we didn't change the file, we just created an empty file. If git stages changes what did it do? 
+> But we didn't change the file. We just created an empty file. If git stages changes what did it do?
 
 Git now knows two things:
 
-- We are tracking changes to a file named script.sh
+- We are going to store the file script.sh in the repository
 - The contents of that file, which in this case is nothing
 
 Try it now.
@@ -218,7 +218,7 @@ We don't have much going on, but that's ok. Let's add some stuff to our `script.
 
 Open `script.sh`. You can use nano or any file editor of your choice.
 
-Let's add a line of code to the file. Let's add the bash command that list all files and folders.
+Let's add a line of code to the file. Let's add the bash command that lists all files and folders.
 
 ```bash
 #!/bin/bash
@@ -286,7 +286,7 @@ git status
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-Git tells us what we need to know: 
+Git tells us what we need to do: 
 
 ```text
 use "git add" and/or "git commit -a"
@@ -321,7 +321,7 @@ Ok that makes sense.
 
 > Pro tip: Git tries to help you sometimes with output messages that give you advice. Notice `use "git reset HEAD file..." to unstage)`. You can use `git reset` to undo adding a file to staging.
 
-Now let's commit the changes.
+Now let's commit the file.
 
 ```bash
 git commit -m 'Added command to list files'
@@ -340,10 +340,9 @@ Notice
 
 That makes sense because of what we saw with `git diff`. We had two `new` lines in the file.
 
-
 ## Review 1
 
-We went through a lot of steps. It might all seem like a blur, but we will repeat most of this and build on it as we go along. Let's take a bit to review what we just did:
+We went through a lot of steps. It might all seem like a blur, but we will repeat most of this and build on it as we go along. Let's take a moment to review what we just did:
 
 * We configured the git username and email with `git config`
 * We created a new repository with `git init`
@@ -356,7 +355,7 @@ We went through a lot of steps. It might all seem like a blur, but we will repea
   * We used `git commit -m 'commit message' to save the changes to the git repository
 * We edited our file and used `git diff` to see what changed.
 * We added the modified file to staging with `git add`
-* We saved those changes to the repository with `git commit -m 'commit message'
+* We saved those changes to the repository with `git commit -m 'commit message'`
 
 > Let's take a break. Take a few minutes to stretch. Put your questions or comments in the `etherpad` and we will talk about some of them after the break.
 
@@ -364,7 +363,7 @@ We went through a lot of steps. It might all seem like a blur, but we will repea
 
 ## Why `git add`? Why staging?
 
-Staging let's us do these thing:
+Staging lets us do these thing:
 
 * Bundle files and related changes together into one commit
 * Commit only those changes we are ready to commit
@@ -409,6 +408,8 @@ fatal: Not a git repository (or any of the parent directories): .git
 ```
 
 Good because we haven't done the command that creates a new git repository. Do you remember what that command was? Put it in the Etherpad.
+
+(check the etherpad)
 
 Let's create three files.
 
@@ -503,7 +504,7 @@ I think our script file is ready to commit, but I don't want to commit code or a
 
 What is the first step? Try it yourselves. Green stickies if it worked the way you think it should.
 
-(note to instructor -- wait for the green stickies)
+(wait for the stickies)
 
 What should you do next? Let's see if git has our file in the staging area. What command do I use? Try it yourselves.
 
@@ -517,7 +518,7 @@ Try it yourselves.
 
 On to the final step.
 
-We have added our file to staging. How do we finally save the changes to the git repository?
+We have added our file to staging. How do we finally commit the changes to the git repository?
 
 Try it yourselves.
 
@@ -526,6 +527,7 @@ Try it yourselves.
 How did this go? Are you remembering the commands and the order in which they should happen? Don't worry if you didn't get it. We will be doing this again.
 
 ### git diff and git status are not required
+
 I had you do `git diff` and `git status` but these commands are not required to save changes to a git repository. You should use them often though because they help you see what is happening. This will help prevent mistakes.
 
 ## Review 2
@@ -533,14 +535,14 @@ I had you do `git diff` and `git status` but these commands are not required to 
 What are the required steps to get your changes into the git repository?
 
 1. Make changes to a file or files
-2. `git add` to add your changed files (the changes) to the staging
+2. `git add` to add your changed files to the staging
 3. `git commit -m 'commit message'` to save your changes to the git repository
 
 Let's take a bit of a break. Let's see what questions we have in the Etherpad.
 
 ## Do it yourselves
 
-Let's commit the changes to `code.py`. 
+Let's commit the changes to `code.py`.
 
 When you are done with `code.py` commit the changes to `about.md`.
 
