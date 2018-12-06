@@ -25,21 +25,23 @@
 
 ## Terminology
 
-`master branch` or `trunk` - this is commonly used as the main line of changes in your repository. In programming this is often the production code. If you were writing your thesis, this could end up being your final version.
+`HEAD` - the last commit made in a branch
 
-`branch`- remember the commit log? Think of that log like a tree. You start with a trunk. Each commit added to the trunk, builds the tree. A git branch is like a branch on a tree. The commits to that branch don't build the trunk, they are separate.
+`master branch` or `trunk` - this is commonly used as the main line of state in your repository. In programming this is often the production code. If you were writing your thesis, this could end up being your final version.
+
+`branch`- remember the commit log? Think of that log like a tree. You start with a trunk. Each commit added to the trunk builds the tree. A git branch is like a branch on a tree. The commits to that branch don't build the trunk, they are separate.
 
 `checkout` - switch to a different branch. Can also be used to create a new branch.
 
-`merge` - zip together the commits from one branch with another branch.
+`merge` - git will try to smash the state of all files in in one commit with the state of the files in another commit.
 
 `history` or `commit history` - a list of all commits made to a branch.
 
-`conflict` - when two or more commits will change the same line, or lines, of code.
+`conflict` - when a merge will change the same lines in files. Git doesn't know how to change the files and so a human has to do it.
 
-`fast-forward` - what happens when a merge has no conflicts. All commits are zipped together and are now a part of the commit history. This is the best most wonderful kind of merge.
+`fast-forward` - if the head of the branch you are merging into is a direct ancestor of the branch you are merging.
 
-`merge commit` git tries to zip commits together. Sometimes the teeth queeze together and this causes a conflict. In this case, once the conflicts are resolved, you will create a merge commit, which includes all of the changes from all commits in the merge.
+`merge commit` - a commit that contains the results of a merge when git could not do a fast-forward merge.
 
 ## Did you know that your git repository is actually a tree?
 
@@ -51,11 +53,11 @@ Look how nice.
 
 ### What is a branch?
 
-Remember the commit log. Think of that log like a tree. You start with a trunk. Each commit added to the trunk, builds the tree. A git branch is like a branch on tree. The commits to that branch don't build the trunk, they are separate.
+Remember the commit log. Think of that log like a tree. You start with a trunk. Each commit added to the trunk builds the tree. A git branch is like a branch on that tree. The commits to that branch don't build the trunk, they are separate - until you merge.
 
 ### Why should I branch?
 
-Branching is good for when you want to make a bunch of changes but don't want them affect the `master` branch.
+Branching is good for when you want to make a bunch of changes but don't want them affect the `master` branch, or trunk.
 
 #### Some examples
 
@@ -75,7 +77,7 @@ Let's see if we have any branches.
 git branch
 ```
 
-This will list all of the branches in our local git respoitory.
+This will list all of the branches in our local git repository.
 
 What did you see?
 
@@ -83,11 +85,11 @@ What did you see?
 * master
 ```
 
-The start indicates the branch you are currently on.
+The star indicates the branch you are currently on.
 
 ## git checkout -b (create a new branch)
 
-We want to make some enhancements to our script but we don't want to mess up the trunk just yet. 
+We want to make some enhancements to our script but we don't want to mess up the trunk just yet.
 
 This is the command to create a new branch.
 
@@ -101,7 +103,7 @@ Let's create a new branch to make those changes.
 git checkout -b script-updates
 ```
 
-`checkout -b` means create a new branch and checkout that branch. The new branch name is the last argument in the command. 
+`checkout -b` means create a new branch and checkout that branch. The new branch name is the last argument in the command.
 
 What branches do we have now?
 
@@ -145,7 +147,7 @@ How do we check the log?
 
 (wait for stickies)
 
-We now have a new branch with changes that are not present in the trunk of our repoistories. What branch is the trunk?
+We now have a new branch with changes that are not present in the trunk of our repositories. What branch is the trunk?
 
 ```bash
 git branch
@@ -155,7 +157,7 @@ git branch
 
 ## git checkout
 
-Let's go back to the master branch. We switch branches with 
+Let's go back to the `master` branch. We switch branches with 
 
 ```bash
 git checkout name-of-branch
@@ -170,7 +172,7 @@ What happened?
 * git switched itself to the `master` branch
 * script.sh changed. It doesn't have the line we added to it. git changed it to match the state of the file in the `master` branch.
 
-Let's see the contents of script.sh. Do you remember the command line to show the contents of a file?
+Let's see the contents of script.sh. Do you remember the command to show the contents of a file?
 
 > Pro tip: tab complete is forever in your favor
 
@@ -178,11 +180,15 @@ Let's see the contents of script.sh. Do you remember the command line to show th
 cat script.sh
 ```
 
-How do we get the changes in `script-updates` into master? 
+How do we get the changes in `script-updates` into master?
 
 ## git merge
 
-With `git merge` we can appply all of the changes in one branch on another branch. Git will try to zip together all of the commits. Let's try that with script-updates and master.
+With `git merge`, git will try to smash the state of all files in one commit with the state of the files in another commit.
+
+In terms of branches it will try to smash the state of the HEAD of one branch with the state of the HEAD in another branch.
+
+Let's try that with script-updates and master.
 
 First let's check what branch we are on using git status.
 
@@ -198,7 +204,7 @@ git merge script-updates
 
 git will merge the branch named in the command with the branch you are currently on.
 
-> Pro tip: Be careful when you branch. Make sure you are on the branch you want. Use `git status` to check before doing a merge.
+> Pro tip: Be careful when you merge. Make sure you are on the branch you want. Use `git status` to check before doing a merge.
 
 ```text
 Updating 3e31d59..92ee033
@@ -213,13 +219,13 @@ Something happened! Let's look at the content of script.sh now.
 cat script.sh
 ```
 
-Do you see the lin you added?
+Do you see the line you added?
 
 (wait for stickies)
 
 ## Review 1
 
-![winter is comming](https://d3suqxyr95ccqd.cloudfront.net/sites/default/files/styles/image_600_width/public/secondary_images/images_and_text/gitflow-no-commit-to-master.jpg?itok=ucTkD0WY)
+![winter is coming](https://d3suqxyr95ccqd.cloudfront.net/sites/default/files/styles/image_600_width/public/secondary_images/images_and_text/gitflow-no-commit-to-master.jpg?itok=ucTkD0WY)
 
 Git is like a tree and we can create branches and zip them together.
 
