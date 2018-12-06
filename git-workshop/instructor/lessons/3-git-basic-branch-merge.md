@@ -87,7 +87,15 @@ The start indicates the branch you are currently on.
 
 ## git checkout -b (create a new branch)
 
-We want to make some enhancements to our script but we don't want to mess up the trunk just yet. Let's create a new branch to make those changes.
+We want to make some enhancements to our script but we don't want to mess up the trunk just yet. 
+
+This is the command to create a new branch.
+
+```bash
+git checkout -b new-branch-name
+```
+
+Let's create a new branch to make those changes.
 
 ```bash
 git checkout -b script-updates
@@ -150,7 +158,7 @@ git branch
 Let's go back to the master branch. We switch branches with 
 
 ```bash
-git checkout nameofbranch
+git checkout name-of-branch
 ```
 
 ```bash
