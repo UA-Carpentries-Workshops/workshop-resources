@@ -1,4 +1,4 @@
-# Basic git collaboration
+# Basic git collaboration, remotes, and GitHub
 
 How to share and collaborate on projects using git and Github.
 
@@ -345,7 +345,7 @@ You're awesome. Now let's do the pull request.
 
 On the Github page click `Pull request`. It should be under the Big Green Button. Enter a comment and a title.
 
-Notice the arrow icon. This is telling you that you want to merge your `master` branch with the ua-carpentries `master` branch. 
+Notice the arrow icon. This is telling you that you want to merge your `master` branch with the ua-carpentries `master` branch.
 
 Click Create pull request to ask for this to happen.
 
@@ -355,7 +355,24 @@ I can now review it and merge it into master
 
 In practice you would probably work on a branch and ask to merge in your branch.
 
-# A little more about Github and project management
+## README.md
 
-## Using issues and issue numbers in commits
+Every GitHub project should have a README that
 
+* describes what the project is about
+* with steps on how to use the code, files, data, etc.
+* and if you want contributors, how to contribute
+
+README.md files should be written in Markdown. This makes them look nice on the website.
+
+## Licenses
+
+By default your project on GitHub is a restrictive license. This means that they can read your stuff but they can't use it.
+
+You can change the license. The least restrictive is the MIT license that let's anyone do anything they want with it.
+
+## GitHub Organizations
+
+If you will be working with a team, it is often helpful to setup an organization. This is where you will keep all of your main repositories and collaborators will make pull requests to those repositories.
+
+[More on GitHub Organizations](https://help.github.com/articles/about-organizations/)
