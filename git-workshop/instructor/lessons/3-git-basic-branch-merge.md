@@ -10,7 +10,7 @@
 * When to use branching
 * When to merge
 * Some common branching and merging patterns
-* How git stops you from overwriting your changes
+* How Git stops you from overwriting your changes
   * `git stash`
 
 ## Guides
@@ -29,11 +29,11 @@
 
 `master branch` or `trunk` - this is commonly used as the main line of state in your repository. In programming this is often the production code. If you were writing your thesis, this could end up being your final version.
 
-`branch`- remember the commit log? Think of that log like a tree. You start with a trunk. Each commit added to the trunk builds the tree. A git branch is like a branch on a tree. The commits to that branch don't build the trunk, they are separate.
+`branch`- remember the commit log? Think of that log like a tree. You start with a trunk. Each commit added to the trunk builds the tree. A Git branch is like a branch on a tree. The commits to that branch don't build the trunk, they are separate.
 
 `checkout` - switch to a different branch. Can also be used to create a new branch.
 
-`merge` - git will try to smash the state of all files in in one commit with the state of the files in another commit.
+`merge` - Git will try to smash the state of all files in in one commit with the state of the files in another commit.
 
 `history` or `commit history` - a list of all commits made to a branch.
 
@@ -41,19 +41,19 @@
 
 `fast-forward` - if the head of the branch you are merging into is a direct ancestor of the branch you are merging.
 
-`merge commit` - a commit that contains the results of a merge when git could not do a fast-forward merge.
+`merge commit` - a commit that contains the results of a merge when Git could not do a fast-forward merge.
 
-## Did you know that your git repository is actually a tree?
+## Did you know that your Git repository is actually a tree?
 
 Look how nice.
 
-![git is a tree](https://www.drupal.org/files/repositorydiagram.png)
+![Git is a tree](https://www.drupal.org/files/repositorydiagram.png)
 
 ## Branching
 
 ### What is a branch?
 
-Remember the commit log. Think of that log like a tree. You start with a trunk. Each commit added to the trunk builds the tree. A git branch is like a branch on that tree. The commits to that branch don't build the trunk, they are separate - until you merge.
+Remember the commit log. Think of that log like a tree. You start with a trunk. Each commit added to the trunk builds the tree. A Git branch is like a branch on that tree. The commits to that branch don't build the trunk, they are separate - until you merge.
 
 ### Why should I branch?
 
@@ -67,7 +67,7 @@ Branching is good for when you want to make a bunch of changes but don't want th
 
 ## Get ready
 
-Make sure you are in the `git-worksop` folder we setup in Basic Git.
+Make sure you are in the `git-workshop` folder we setup in Basic Git.
 
 ## git branch
 
@@ -77,7 +77,7 @@ Let's see if we have any branches.
 git branch
 ```
 
-This will list all of the branches in our local git repository.
+This will list all of the branches in our local Git repository.
 
 What did you see?
 
@@ -124,7 +124,7 @@ Open script.sh and let's make some changes. Add this line to script.sh.
 git branch
 ```
 
-How do we find out if git sees our changes?
+How do we find out if Git sees our changes?
 
 ```bash
 git status
@@ -169,8 +169,8 @@ git checkout master
 
 What happened?
 
-* git switched itself to the `master` branch
-* script.sh changed. It doesn't have the line we added to it. git changed it to match the state of the file in the `master` branch.
+* Git switched itself to the `master` branch
+* script.sh changed. It doesn't have the line we added to it. Git changed it to match the state of the file in the `master` branch.
 
 Let's see the contents of script.sh. Do you remember the command to show the contents of a file?
 
@@ -184,13 +184,13 @@ How do we get the changes in `script-updates` into master?
 
 ## git merge
 
-With `git merge`, git will try to smash the state of all files in one commit with the state of the files in another commit.
+With `git merge`, Git will try to smash the state of all files in one commit with the state of the files in another commit.
 
 In terms of branches it will try to smash the state of the HEAD of one branch with the state of the HEAD in another branch.
 
 Let's try that with script-updates and master.
 
-First let's check what branch we are on using git status.
+First let's check what branch we are on using `git status`.
 
 ```bash
 git status
@@ -202,7 +202,7 @@ Now do the merge.
 git merge script-updates
 ```
 
-git will merge the branch named in the command with the branch you are currently on.
+Git will merge the branch named in the command with the branch you are currently on.
 
 > Pro tip: Be careful when you merge. Make sure you are on the branch you want. Use `git status` to check before doing a merge.
 
@@ -271,9 +271,9 @@ Please commit your changes or stash them before you switch branches.
 Aborting                                                                           
 ```
 
-git won't let you loose your work! Thanks git.
+Git won't let you loose your work! Thanks Git.
 
-Ok, so what if you need to switch branches but you have work in progress on the current one? There is a command for that. Notice in the git message:
+OK, so what if you need to switch branches but you have work in progress on the current one? There is a command for that. Notice in the Git message:
 
 ```text
 Please commit your changes or stash them before you switch branches.

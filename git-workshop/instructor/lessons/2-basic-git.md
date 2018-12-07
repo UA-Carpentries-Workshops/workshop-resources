@@ -4,13 +4,13 @@
 
 ## Topics Covered
 
-* `git init` - Start a git repository
-* `git config` - Configure git and the git configuration options
+* `git init` - Start a Git repository
+* `git config` - Configure Git and the Git configuration options
 * `git status` - Check for changed files
 * `git diff` - See the differences
 * `git log` - See a log of changes
 * `git add` - Stage files whose changes you want to track
-* `git commit -m 'message'` - Commit the changes to the git repository
+* `git commit -m 'message'` - Commit the changes to the Git repository
 
 ## Guides and resources
 
@@ -18,7 +18,7 @@
 
 [First Time Git Setup Guide](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 
-[So WTF is git?](https://codeburst.io/so-wtf-is-git-fa7daa0e0271)
+[So WTF is Git?](https://codeburst.io/so-wtf-is-git-fa7daa0e0271)
 
 ## Terminology
 
@@ -42,16 +42,16 @@ _The last commit introduced a bug in the program._
 
 You should be in the `basic-git` folder created during the workshop setup. Use `pwd` to check to make sure you are there.
 
-## First time git setup
+## First time Git setup
 [First Time Git Setup Guide](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 
-Let's see how git is configured.
+Let's see how Git is configured.
 
 ```bash
 git config
 ```
 
-This shows us the different options git config has to offer.
+This shows us the different options `git config` has to offer.
 
 Notice we have some config file locations:
 
@@ -92,9 +92,9 @@ git config --list
 
 ## git init -- CREATE A NEW GIT REPOSITORY
 
-In this folder we dont see much. We don't have any files or other folders.
+In this folder we don't see much. We don't have any files or other folders.
 
-Let's initialize (create) a new git repository.
+Let's initialize (create) a new Git repository.
 
 ```bash
 git init
@@ -102,9 +102,9 @@ git init
 
 Use `ls -la` to see what this command created.
 
-You should see a `.git` folder. This is the index where all of the file changes will be stored. You can think of it as you git database.
+You should see a `.git` folder. This is the index where all of the file changes will be stored. You can think of it as your Git database.
 
-## git status -- What's going on in my git repository
+## git status -- What's going on in my Git repository
 
 Try it now.
 
@@ -124,7 +124,7 @@ nothing to commit (create/copy files and use "git add" to track)
 
 Notice `On branch master`. `git status` will tell us the name of the branch we are on. We will not cover branching in this lesson, but you can find more [here](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging).
 
-Not much else to see, but that is ok. It's because we have an empty git repository and no files. Let's make some.
+Not much else to see, but that is OK. It's because we have an empty Git repository and no files. Let's make some.
 
 ```bash
 touch script.sh
@@ -148,13 +148,13 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-> Git sees our new file and tries to be helpful. Git suggests that this is a file we might want to track. Thanks git, that is true. I do want to `track changes` to this `new` file.
+> Git sees our new file and tries to be helpful. Git suggests that this is a file we might want to track. Thanks Git, that is true. I do want to `track changes` to this `new` file.
 
 ## git add (stage file to get them ready to commit them to the repo)
 
-To start tracking changes to a file we first need to add it to what git calls `staging`. Don't worry about what this means for now. Let's go through the whole process and later we wil explain what is going on and why we do the staging thing.
+To start tracking changes to a file we first need to add it to what Git calls `staging`. Don't worry about what this means for now. Let's go through the whole process and later we will explain what is going on and why we do the staging thing.
 
-> Pro tip: You can use tab complete with git commands.
+> Pro tip: You can use tab complete with Git commands.
 
 ```bash
 git add script.sh
@@ -175,15 +175,15 @@ Changes to be committed:
         new file:   script.sh
 ```
 
-git tells us about the new file that is ready to be committed. Let's do that.
+Git tells us about the new file that is ready to be committed. Let's do that.
 
-## git commit (save changes to the git repository)
+## git commit (save changes to the Git repository)
 
-`git commit` will save any of the changes in staging to the git repository.
+`git commit` will save any of the changes in staging to the Git repository.
 
 You might be thinking
 
-> But we didn't change the file. We just created an empty file. If git stages changes what did it do?
+> But we didn't change the file. We just created an empty file. If Git stages changes what did it do?
 
 Git now knows two things:
 
@@ -212,7 +212,7 @@ Git tries to help us. It tells us
   * the number of new changes added to the files
   * the number of things that were deleted from the file
 
-We don't have much going on, but that's ok. Let's add some stuff to our `script.sh` and see what git does with it.
+We don't have much going on, but that's OK. Let's add some stuff to our `script.sh` and see what Git does with it.
 
 ## Making changes and seeing what is different
 
@@ -236,7 +236,7 @@ sh script.sh
 
 Did you see what you expected to see? Great, that means our script is working.
 
-Let's see what `git` thinks is going on. How do we ask git about the status of our stuff?
+Let's see what Git thinks is going on. How do we ask Git about the status of our stuff?
 
 ```bash
 git status
@@ -255,7 +255,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 Notice that now instead of `new` we see `modified`. Git sees the changes we made to `script.sh`. Thanks `git`!
 
-Let's see what git thinks has changed.
+Let's see what Git thinks has changed.
 
 ### git diff (to see the difference between the current file and the previous version)
 
@@ -274,7 +274,7 @@ index e69de29..84560e7 100644
 +ls -la
 ```
 
-Notice git tells us there were two new lines added to this file. That's neat!
+Notice Git tells us there were two new lines added to this file. That's neat!
 
 If you are happy with your changes, you can now stage them for commit. What's the first step? `git status` will remind you. Let's do that again.
 
@@ -298,7 +298,7 @@ Let's do `git add`.
 git add script.sh
 ```
 
-What does git think is going on? Let's find out.
+What does Git think is going on? Let's find out.
 
 ```bash
 git status
@@ -317,7 +317,7 @@ Notice
 * Changes to be committed
 * modified: script.sh
 
-Ok that makes sense.
+OK that makes sense.
 
 > Pro tip: Git tries to help you sometimes with output messages that give you advice. Notice `use "git reset HEAD file..." to unstage)`. You can use `git reset` to undo adding a file to staging.
 
@@ -344,15 +344,15 @@ That makes sense because of what we saw with `git diff`. We had two `new` lines 
 
 We went through a lot of steps. It might all seem like a blur, but we will repeat most of this and build on it as we go along. Let's take a moment to review what we just did:
 
-* We configured the git username and email with `git config`
+* We configured the Git username and email with `git config`
 * We created a new repository with `git init`
 * We use `git status` to get some information about our repository
-  * Does git see changes to our files?
-  * Does git see new files?
+  * Does Git see changes to our files?
+  * Does Git see new files?
   * What files are in staging?
-* We created an empty file and added it to the git repository
+* We created an empty file and added it to the Git repository
   * We used `git add` to add it to the staging area
-  * We used `git commit -m 'commit message' to save the changes to the git repository
+  * We used `git commit -m 'commit message' to save the changes to the Git repository
 * We edited our file and used `git diff` to see what changed.
 * We added the modified file to staging with `git add`
 * We saved those changes to the repository with `git commit -m 'commit message'`
@@ -371,15 +371,15 @@ Staging lets us do these thing:
 
 ## Creating a new repository when you already have a bunch of files
 
-I bet some of you already have a project going, with lots of files, and you are wondering if you have to have an empty folder in order to create a new git repository.
+I bet some of you already have a project going, with lots of files, and you are wondering if you have to have an empty folder in order to create a new Git repository.
 
-> How do we create a new git repository if we already started working on a project?
+> How do we create a new Git repository if we already started working on a project?
 
 Don't worry, you can `git init` at any point.
 
-> IMPORTANT: git will only track files in the folder where the `.git` repository is and and files inside of that folder. So if your project is not contained under one folder, you should move all of the files you need to track to go under one folder or you will need to have multiple git repositories.
+> IMPORTANT: Git will only track files in the folder where the `.git` repository is and and files inside of that folder. So if your project is not contained under one folder, you should move all of the files you need to track to go under one folder or you will need to have multiple Git repositories.
 
-Let's try creating a git repository in a folder with lots of files already in it.
+Let's try creating a Git repository in a folder with lots of files already in it.
 
 Use change directory to go up one folder level.
 
@@ -397,19 +397,19 @@ mkdir git-workshop
 cd git-workshop
 ```
 
-Let's see what git thinks is going in here? Can you guess what `git status` will do?
+Let's see what Git thinks is going in here? Can you guess what `git status` will do?
 
 ```bash
 git status
 ```
 
 ```text
-fatal: Not a git repository (or any of the parent directories): .git
+fatal: Not a Git repository (or any of the parent directories): .git
 ```
 
-Good because we haven't done the command that creates a new git repository. Do you remember what that command was? Put it in the Etherpad.
+Good because we haven't done the command that creates a new Git repository. Do you remember what that command was? Put it in the Etherpad.
 
-(check the etherpad)
+(check the Etherpad)
 
 Let's create three files.
 
@@ -453,7 +453,7 @@ Open `about.md` and add this bit of `markdown`.
 # About Me
 ```
 
-You should have three files now. Let's try to create a new git repository.
+You should have three files now. Let's try to create a new Git repository.
 
 ```bash
 git init
@@ -473,7 +473,7 @@ ls -la
 
 Did you see your `.git` folder? That's your new repository.
 
-What does `git` think is happening now?
+What does Git think is happening now?
 
 ```bash
 git status
@@ -481,7 +481,7 @@ git status
 
 What do you expect to see? Put your thoughts in the Etherpad.
 
-> Will git see our files?
+> Will Git see our files?
 
 ```text
 On branch master
@@ -506,11 +506,11 @@ What is the first step? Try it yourselves. Green stickies if it worked the way y
 
 (wait for the stickies)
 
-What should you do next? Let's see if git has our file in the staging area. What command do I use? Try it yourselves.
+What should you do next? Let's see if Git has our file in the staging area. What command do I use? Try it yourselves.
 
 (wait for the stickies)
 
-Let's see what git thinks has changed. What command do I use to see the difference between the current state of a file and the previous state? What do you expect to happen? Put your thoughts in the Etherpad.
+Let's see what Git thinks has changed. What command do I use to see the difference between the current state of a file and the previous state? What do you expect to happen? Put your thoughts in the Etherpad.
 
 Try it yourselves.
 
@@ -518,7 +518,7 @@ Try it yourselves.
 
 On to the final step.
 
-We have added our file to staging. How do we finally commit the changes to the git repository?
+We have added our file to staging. How do we finally commit the changes to the Git repository?
 
 Try it yourselves.
 
@@ -528,15 +528,15 @@ How did this go? Are you remembering the commands and the order in which they sh
 
 ### git diff and git status are not required
 
-I had you do `git diff` and `git status` but these commands are not required to save changes to a git repository. You should use them often though because they help you see what is happening. This will help prevent mistakes.
+I had you do `git diff` and `git status` but these commands are not required to save changes to a Git repository. You should use them often though because they help you see what is happening. This will help prevent mistakes.
 
 ## Review 2
 
-What are the required steps to get your changes into the git repository?
+What are the required steps to get your changes into the Git repository?
 
 1. Make changes to a file or files
 2. `git add` to add your changed files to the staging
-3. `git commit -m 'commit message'` to save your changes to the git repository
+3. `git commit -m 'commit message'` to save your changes to the Git repository
 
 Let's take a bit of a break. Let's see what questions we have in the Etherpad.
 
@@ -597,7 +597,7 @@ A bad message might look like this:
 
 * commit 1 
 * changed the file
-* This thing was broken and now it isnt
+* This thing was broken and now it isn't
 * **YOLO!!**
 
 ![DO IT AGAIN](https://funnypictures.me/wp-content/uploads/2012/10/funny-pictures-felix-baumgartner-space-jump-that-was-fun-meme.jpg)

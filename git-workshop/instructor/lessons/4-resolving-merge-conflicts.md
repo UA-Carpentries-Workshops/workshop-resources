@@ -54,7 +54,7 @@ Now save the changes to this file. Do you remember the commands and process?
 
 (wait for stickies)
 
-Once the changes are comitted, switch back to the master branch.
+Once the changes are committed, switch back to the master branch.
 
 ```bash
 git checkout master
@@ -62,7 +62,7 @@ git checkout master
 
 Now try to merge the script-updates branch. Do you remember the command for merge?
 
-(wait for stickeies)
+(wait for stickies)
 
 ```bash
 git merge script-updates
@@ -108,7 +108,7 @@ Try it now.
 git merge --abort
 ```
 
-This wil undo any changes the merge may have caused. This only works when there are merge conflicts.
+This will undo any changes the merge may have caused. This only works when there are merge conflicts.
 
 ## Resolving a merge conflict
 
@@ -158,9 +158,9 @@ Are the lines from the branch you tried to merge in.
 
 ## Command line resolution
 
-Let's say you want to discard the changes from the script-updates branch and keep the master bracnch.
+Let's say you want to discard the changes from the script-updates branch and keep the master branch.
 
-Chekcout the version of the file that is in master like this:
+Checkout the version of the file that is in master like this:
 
 ```bash
 git checkout --ours about.md
