@@ -249,7 +249,7 @@ Most software developers use branching and merging. But there are some large org
 
 Remember how switching branches changes your files to match the state of the files in the branch?
 
-Did this make you a little nervous? It shouldn't. Git won't let you loose your work.
+Did this make you a little nervous? It shouldn't. Git won't let you lose your work.
 
 Let's make changes to about.md. Open it and add some stuff to it.
 
@@ -271,7 +271,7 @@ Please commit your changes or stash them before you switch branches.
 Aborting                                                                           
 ```
 
-Git won't let you loose your work! Thanks Git.
+Git won't let you lose your work! Thanks Git.
 
 OK, so what if you need to switch branches but you have work in progress on the current one? There is a command for that. Notice in the Git message:
 
