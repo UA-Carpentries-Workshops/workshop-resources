@@ -1,37 +1,37 @@
-# Basic git collaboration, remotes, and GitHub
+# Basic Git collaboration, remotes, and GitHub
 
-How to share and collaborate on projects using git and Github.
+How to share and collaborate on projects using Git and GitHub.
 
 ## Topics covered
 
-* Setting up a Github repository
+* Setting up a GitHub repository
 * Remotes and `origin`
 * `git remote` - List remote repositories, link to a remote repository
 * `git fetch` - Get references to all the stuff in the remote repository including commits and branches.
 * `git push` - Pushing to a remote repository
 * Forking repositories
-* `git clone` - Cloning an existing Github repository
+* `git clone` - Cloning an existing GitHub repository
 * `git pull` - Pulling from a remote repository
-* Github pull requests
+* GitHub pull requests
 * The importance of a good README file
 * Licenses
-* Setting up a Github organization
+* Setting up a GitHub organization
 
 ## Guides and resources
 
-## Git vs Github
+## Git vs GitHub
 
-> GitHub is not required to use git. GitHub is a service that provides hosting remote git repositories.
+> GitHub is not required to use Git. GitHub is a service that provides hosting remote Git repositories.
 
-[Git vs. Github](https://stackoverflow.com/questions/13321556/difference-between-git-and-github)
+[Git vs. GitHub](https://stackoverflow.com/questions/13321556/difference-between-git-and-github)
 
-## Remote repositories (Github)
+## Remote repositories (GitHub)
 
-Github provides a service for something we call a `remote repository`. A `remote repository` is a git repository that lives somewhere else in the world ... like in the cloud. Often this will be a git service provider like Github, Bitbucket, Git Lab, or Kiln, but could be a git remote repository that you setup yourself.
+GitHub provides a service for something we call a `remote repository`. A `remote repository` is a Git repository that lives somewhere else in the world ... like in the cloud. Often this will be a Git service provider like GitHub, Bitbucket, GitLab, or Kiln, but could be a Git remote repository that you setup yourself.
 
 ![Remote repository diagram](https://qph.fs.quoracdn.net/main-qimg-8451a3ecbca8820d36328d27bb19eed4)
 
-Github is very popular and has extra features that make collaboration easier. It is also home to pretty much every open source project ever.
+GitHub is very popular and has extra features that make collaboration easier. It is also home to pretty much every open source project ever.
 
 ### Terminology
 
@@ -41,14 +41,14 @@ Github is very popular and has extra features that make collaboration easier. It
 
 > `working copy` is all the files on your computer that are a part of your local repository
 
-## Setting up a Github repository
+## Setting up a GitHub repository
 
-Let's create a new Github repository.
+Let's create a new GitHub repository.
 
-1. Go to [Github](https://github.com) and make sure you are logged in. 
+1. Go to [GitHub](https://github.com) and make sure you are logged in. 
 2. On the landing page click `New Repository`.
 3. Repository name: git-workshop
-4. Description: UA Carpentries git workshop
+4. Description: UA Carpentries Git workshop
 5. Add a license: select MIT (it's the most open)
 6. Click `Create Repository`
 
@@ -63,7 +63,7 @@ git push -u origin master
 
 > I'm using ssh. You will probably see an `https` link.
 
-We can use these git commands to link the git-workshop repository we have been working on in `Basic Git` and `Branching and Merging`. Make sure you are in your git-workshop directory for the next sections.
+We can use these Git commands to link the git-workshop repository we have been working on in `Basic Git` and `Branching and Merging`. Make sure you are in your git-workshop directory for the next sections.
 
 ## Make sure you are on the master branch before continuing
 
@@ -81,7 +81,7 @@ git checkout master
 git remote add origin git@github.com:<YourUserNameHere>/git-workshop.git
 ```
 
-This links your Github repo with your local repo. Let's check to see what remotes we have now.
+This links your GitHub repo with your local repo. Let's check to see what remotes we have now.
 
 ```bash
 git remote -v
@@ -101,7 +101,7 @@ origin  git@github.com:MarneeDear/git-workshop.git (push)
 
 What happened?
 
-* We used `git remote add` to add a link to your new Github repository
+* We used `git remote add` to add a link to your new GitHub repository
 * We named the remote `origin`
 * We see a `fetch` URL and a `push` URL
   * Fetch is from where `git pull` and `git fetch` will come when you use `origin`
@@ -109,7 +109,7 @@ What happened?
 
 ## git push
 
-Let's push all of our code to our new Github repository. Push means to send all of the latest changes to a remote repository.
+Let's push all of our code to our new GitHub repository. Push means to send all of the latest changes to a remote repository.
 
 ```bash
 git push -u origin master
@@ -144,7 +144,7 @@ Branch master set up to track remote branch master from origin.
 
 That is the message saying that your local `master` branch is now tracking with your remote origin `master` branch.
 
-Let's check to see what git thinks is happening now.
+Let's check to see what Git thinks is happening now.
 
 ```bash
 git status
@@ -160,34 +160,34 @@ Did you notice something new?
 
 > Your branch is up-to-date with 'origin/master'.
 
-git is now also checking the status of your repository against the remote.
+Git is now also checking the status of your repository against the remote.
 
-What does git check?
+What does Git check?
 
 Git checks to see what commits are in the remote repository that are not in your local repository.
 
-Let's see what happened on Github.
+Let's see what happened on GitHub.
 
-Go to your repository on Github and refresh the page. You should see all of your files.
+Go to your repository on GitHub and refresh the page. You should see all of your files.
 
 ## Review 1
 
 What have we done so far?
 
 * We setup a repository called `git-workshop`
-* We added a remote called origin that points to the `git-workshop` remote branch on Github.
+* We added a remote called origin that points to the `git-workshop` remote branch on GitHub.
 * We learned how to list our remotes with `git remote -v`
 * We learned how to push such that we link a local branch with a remote branch with `git push -u <remotename> <branchname>`
 
-![I didnt forget to push](http://m.memegen.com/bsky67.jpg)
+![I didn't forget to push](http://m.memegen.com/bsky67.jpg)
 
 > Take a few minutes break.
 
 Do you have any questions? Put them in the Etherpad and we will try to get to them after the break.
 
-## The Github repository
+## The GitHub repository
 
-Let's take a tour of our Github repo.
+Let's take a tour of our GitHub repo.
 
 We can see
 
@@ -195,9 +195,9 @@ We can see
 * A link to `branches`
 * A link to `commits`
 
-### Github branches
+### GitHub branches
 
-Just like on the command line, we can see branches on Github.
+Just like on the command line, we can see branches on GitHub.
 
 To see all the remote branches we can do this command:
 
@@ -205,14 +205,14 @@ To see all the remote branches we can do this command:
 git branch -r
 ```
 
-### Github commits
+### GitHub commits
 
 Here we can see a commit history. This is a list of all of the changes that have been made to our files. If you click on a commit you can see a visual representation of what has changed.
 
 * Green lines were lines that were added. 
 * Red lines were lines that were removed or changed.
 
-That's pretty nice. Thanks Github!
+That's pretty nice. Thanks GitHub!
 
 
 ## Forking and cloning
@@ -235,7 +235,7 @@ First change directories to go to the root, or home, folder.
 cd ~
 ```
 
-On the repository page, drop down the green button and click the clipboard to copy the url to the repostory.
+On the repository page, drop down the green button and click the clipboard to copy the URL to the repository.
 
 Use `git clone` to download the repository onto your computer. 
 
@@ -243,7 +243,7 @@ Use `git clone` to download the repository onto your computer.
 git clone git@github.com:MarneeDear/2018-12-07-git-workshop.git
 ```
 
-Let's git do its thing.
+Let's Git do its thing.
 
 Once it is done you can change directories to go to the new repository.
 
@@ -267,7 +267,7 @@ What remotes do you have now? Do you remember the command?
 git remote -v
 ```
 
-Note that git automatically made the clone source the `origin`.
+Note that Git automatically made the clone source the `origin`.
 
 (wait for stickies)
 
@@ -289,7 +289,7 @@ To add a new remote:
 git remote add ua-carpentries https://github.com/UA-Carpentries-Workshops/2018-12-07-git-workshop.git
 ```
 
-Now you can pull from the orignial remote
+Now you can pull from the original remote
 
 ```bash
 git pull ua-carpentries master
@@ -343,7 +343,7 @@ Refresh the page on GitHub. Do you see your file?
 
 You're awesome. Now let's do the pull request.
 
-On the Github page click `Pull request`. It should be under the Big Green Button. Enter a comment and a title.
+On the GitHub page click `Pull request`. It should be under the Big Green Button. Enter a comment and a title.
 
 Notice the arrow icon. This is telling you that you want to merge your `master` branch with the ua-carpentries `master` branch.
 
